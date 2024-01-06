@@ -152,7 +152,8 @@ class Car {
     this.name = name
     this.tank = tankSize // car initiazes full of gas
     // ✨ initialize whatever other properties are needed
-    this.mpg = mpg
+    this.mpg = mpg,
+    this.maxFill = tankSize
   }
 
   /**
@@ -196,8 +197,8 @@ class Car {
   refuel(gallons) {
     // ✨ implement
     if(this.tank + gallons >= 20){
-      this.tank = 20
-      return 600
+      this.tank = this.maxFill
+      return this.mpg * this.maxFill
     // } else if(this.tank + gallons > 20){
     //   this.tank = 20
     //   return this.tank * this.mpg
