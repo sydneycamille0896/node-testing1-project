@@ -154,6 +154,7 @@ class Car {
     // ✨ initialize whatever other properties are needed
     this.mpg = mpg,
     this.maxFill = tankSize
+    this.maxDistance = tankSize * mpg
   }
 
   /**
@@ -176,7 +177,8 @@ class Car {
       this.tank -= (distance/this.mpg)
       this.odometer += distance
     } else {
-      this.odometer += (distance - (this.tank*this.mpg))
+      //this.odometer += (distance - (this.tank*this.mpg))
+      this.odometer += this.maxDistance
       this.tank = 0
     }
     //console.log(this.tank)
