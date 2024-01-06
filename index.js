@@ -93,7 +93,7 @@ class Counter {
     } else {
       this.currNumber
     }
-    
+    return this.currNumber
 }
 }
 class Seasons {
@@ -195,7 +195,7 @@ class Car {
    */
   refuel(gallons) {
     // ✨ implement
-    if(this.tank + gallons > 20){
+    if(this.tank + gallons >= 20){
       return 600
     // } else if(this.tank + gallons > 20){
     //   this.tank = 20
