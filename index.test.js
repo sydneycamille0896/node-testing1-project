@@ -51,7 +51,7 @@ describe('[Exercise 4] Counter', () => {
    test('[7] the SECOND CALL of counter.countDown returns the initial count minus one', () => {
     counter.countDown()
     counter.countDown()
-    console.log(counter.currNumber)
+    //console.log(counter.currNumber)
     expect(counter.currNumber).toBe(2) 
    })
    test('[8] the count eventually reaches zero but does not go below zero', () => {
@@ -122,7 +122,8 @@ describe('[Exercise 6] Car', () => {
     expect(focus.refuel(10)).toBe(300)
    })
    test('[18] adding fuel to a full tank has no effect', () => {
-    expect(focus.refuel(10)).toBe(600)
+    console.log(focus.refuel(90))
+    expect(focus.refuel(90)).toBe(600)
    })
 })
 
